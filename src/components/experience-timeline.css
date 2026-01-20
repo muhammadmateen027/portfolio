@@ -1,0 +1,108 @@
+.experience-timeline {
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+    padding-left: 24px;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    border-radius: 50%;
+    border: 3px solid var(--timeline-dot-border, #fff);
+    z-index: 2;
+    box-shadow: 0 2px 8px #fda08544;
+}
+
+.timeline-dot-animated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1.5s infinite alternate;
+    color: #fff;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 #fda08555;
+    }
+
+    to {
+        box-shadow: 0 0 16px 8px #fda08533;
+    }
+}
+
+.timeline-connector {
+    position: absolute;
+    left: -4px;
+    top: 28px;
+    width: 4px;
+    height: calc(100% - 28px);
+    background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--timeline-bg, rgba(255, 255, 255, 0.7));
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px 24px;
+    margin-left: 24px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+[data-theme='dark'] .timeline-content {
+    background: rgba(34, 34, 34, 0.7);
+}
+
+.timeline-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+[data-theme='dark'] .timeline-header {
+    color: #f6d365;
+}
+
+.timeline-role {
+    margin-right: 8px;
+}
+
+.timeline-company {
+    color: #888;
+    font-weight: 400;
+}
+
+.timeline-duration {
+    color: #f6d365;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.timeline-description {
+    margin-bottom: 8px;
+}
+
+.timeline-highlights {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.timeline-highlights li {
+    margin-bottom: 4px;
+}
