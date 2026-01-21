@@ -1,0 +1,33 @@
+{
+    "name": "Muhammad Mateen",
+    "about": "Software engineer with specialty in product development looking to join an organization where strong project management and analytical skills will be useful in the delivery of products which meet user needs.\n\n8+ years of professional experience in Mobile Apps Development, specializing in Hybrid Mobile Applications using Flutter with Dart. Experienced in CI/CD processes (Codemagic, Bitrise, Fastlane) and end-to-end implementation of Android, Joget Workflow, and NodeJS.",
+    "links": {
+        "linkedin": "https://www.linkedin.com/in/muhammadmateen027/",
+        "github": "https://github.com/muhammadmateen027",
+        "email": "muhammadmateen027@gmail.com",
+        "address": "Berlin, Germany"
+    },
+    "profilePicture": "https://github.com/muhammadmateen027.png",
+    "featuredProjects": [
+        "Aware",
+        "Teleportal Logistics",
+        "Expensense Pro"
+    ],
+    "phrases": [
+        "Flutter expert",
+        "Father",
+        "Software Engineer",
+        "Good Listener",
+        "Solution provider"
+    ],
+    "sectionOrder": [
+        "experience",
+        "projects",
+        "skills",
+        "licenses",
+        "languages",
+        "publications",
+        "featuredProjects",
+        "education"
+    ]
+}

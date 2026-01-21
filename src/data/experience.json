@@ -1,0 +1,78 @@
+[
+    {
+        "role": "Senior Mobile Engineer",
+        "company": "SafetyIo",
+        "duration": "May 2025 - Present",
+        "description": "Creating new app for FireGrid department.",
+        "highlights": [
+            "Proposing and demonstrating ideas for product improvement through demos.",
+            "Playing an integral part in app development and release management.",
+            "Collaborating with the team to enhance the mobile user experience."
+        ]
+    },
+    {
+        "role": "Senior Mobile Engineer",
+        "company": "Aware GmbH",
+        "duration": "August 2023 - March 2025",
+        "description": "Building new features and upgrading the app’s architecture layer as a senior developer.",
+        "highlights": [
+            "Proposing and demonstrating ideas for product improvement through demos.",
+            "Playing an integral part in app development and release management.",
+            "Collaborating with the team to enhance the mobile user experience."
+        ]
+    },
+    {
+        "role": "Software Engineer",
+        "company": "Upday (Axel-Springer)",
+        "duration": "January 2022 - January 2023",
+        "description": "Handled pre-released applications and implemented advanced image processing features.",
+        "highlights": [
+            "Implemented image processing using generic and reusable code.",
+            "Actively involved in design and architectural discussions from day one.",
+            "Optimized app performance and stability for a large user base."
+        ]
+    },
+    {
+        "role": "Senior Mobile App Developer",
+        "company": "Airasia (TELEPORT)",
+        "duration": "July 2019 - December 2021",
+        "description": "Developed real-time business model solutions and reshaped functional requirements.",
+        "highlights": [
+            "Implemented real-time GPS tracking for First Miles, A2A, and Last Miles logistics.",
+            "Reshaped business models into high-performance mobile application components.",
+            "Managed technical documentation and execution of test plans."
+        ]
+    },
+    {
+        "role": "Software Engineer",
+        "company": "Open Dynamics SDN BHD",
+        "duration": "January 2018 - July 2019",
+        "description": "Responsible for end-to-end Android development and back-end API integration.",
+        "highlights": [
+            "Designed and developed Android applications and custom plugins.",
+            "Built and maintained RESTful back-end APIs.",
+            "Conducted extensive debugging and performance testing."
+        ]
+    },
+    {
+        "role": "Android Developer",
+        "company": "On2Sol (PVT) LTD.",
+        "duration": "May 2016 - December 2017",
+        "description": "Worked on Android and IoT development, integrating medical devices with real-time databases.",
+        "highlights": [
+            "Configured medical devices to send vitals and sensor data to Firebase and IBM Bluemix.",
+            "Integrated IBM Watson IoT platform for advanced data processing.",
+            "Converted and optimized code snippets from Objective-C to Android Java."
+        ]
+    },
+    {
+        "role": "Android Developer (Internee)",
+        "company": "Veiliux (Pvt) LTD.",
+        "duration": "March 2016 - May 2016",
+        "description": "Assisted in API implementations and front-end designing for Android apps.",
+        "highlights": [
+            "Contributed to UI/UX design and front-end development.",
+            "Learned and implemented core Android API integrations."
+        ]
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Aware",
+        "description": "The health companion app that connects to your labs and wearables to provide personalized health insights and actionable recommendations. Built with Flutter, it features complex data visualizations and secure medical data handling.",
+        "links": [
+            "https://aware.app"
+        ]
+    },
+    {
+        "title": "Peachee",
+        "description": "A comprehensive lifestyle and community platform built with Flutter. It focuses on connecting users with local services and foster a vibrant community atmosphere with real-time updates and seamless interactions.",
+        "links": [
+            "https://peachee.com"
+        ]
+    },
+    {
+        "title": "Teleportal Logistics",
+        "description": "A robust logistics platform designed for real-time tracking of shipments and fleet management. It integrates complex GPS tracking modules and provides a seamless interface for both drivers and dispatchers.",
+        "links": []
+    },
+    {
+        "title": "e-Pelabuhan",
+        "description": "A sophisticated Port Management System designed to optimize cargo handling and vessel scheduling. It streamlines port operations by automating manual tasks and providing real-time analytics for better decision-making.",
+        "links": []
+    },
+    {
+        "title": "Expensense Pro",
+        "description": "A personal finance manager app that helps users track their spending, set budgets, and visualize their financial health. It features automatic expense categorization and encrypted data storage for user privacy.",
+        "links": []
+    },
+    {
+        "title": "Remote Health Monitoring",
+        "description": "An IoT-integrated system that tracks vital signs using medical sensors and transmits data to a secure cloud platform. It enables healthcare providers to monitor patients remotely and receive alerts for critical changes.",
+        "links": []
+    },
+    {
+        "title": "Pass Dating App",
+        "description": "A modern social search and dating application that uses geofencing and preference matching to connect people. It features real-time chat, video calling, and a highly customizable user profile system.",
+        "links": []
+    },
+    {
+        "title": "Smart Attendance System",
+        "description": "A Geofencing-based attendance tracking solution for organizations. It eliminates manual entry by automatically logging employee presence within predefined office boundaries using mobile GPS technology.",
+        "links": []
+    }
+]

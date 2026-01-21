@@ -1,20 +1,14 @@
-// profile-hero-animated-text.tsx
 import { useEffect, useRef, useState } from 'react';
-
-const phrases = [
-    'Flutter expert',
-    'Father',
-    'Software Engineer',
-    'Good Listener',
-    'Solution provider',
-];
+import { usePortfolioData } from './DataContext';
 
 export function AnimatedSubtitle() {
+    const { phrases } = usePortfolioData();
     const [index, setIndex] = useState(0);
     const [show, setShow] = useState(true);
     const timeoutRef = useRef<number | null>(null);
 
     useEffect(() => {
+        if (!phrases || phrases.length === 0) return;
         timeoutRef.current = window.setTimeout(() => {
             setShow(false);
             setTimeout(() => {
@@ -25,7 +19,9 @@ export function AnimatedSubtitle() {
         return () => {
             if (timeoutRef.current) clearTimeout(timeoutRef.current);
         };
-    }, [index, show]);
+    }, [index, show, phrases]);
+
+    if (!phrases || phrases.length === 0) return null;
 
     return (
         <span
@@ -55,6 +51,7 @@ function useIsDarkTheme() {
 }
 
 export function TypingAnimatedSubtitle() {
+    const { phrases } = usePortfolioData();
     const isDark = useIsDarkTheme();
     const [index, setIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
@@ -62,6 +59,8 @@ export function TypingAnimatedSubtitle() {
     const timeoutRef = useRef<number | null>(null);
 
     useEffect(() => {
+        if (!phrases || phrases.length === 0) return;
+
         if (typing) {
             if (charIndex < phrases[index].length) {
                 timeoutRef.current = window.setTimeout(() => {
@@ -83,6 +82,8 @@ export function TypingAnimatedSubtitle() {
             if (timeoutRef.current) clearTimeout(timeoutRef.current);
         };
     }, [charIndex, typing, index, phrases]);
+
+    if (!phrases || phrases.length === 0) return null;
 
     const displayed = phrases[index].slice(0, charIndex);
     const visible = typing ? displayed.length > 0 : false;

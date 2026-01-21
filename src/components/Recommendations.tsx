@@ -41,11 +41,11 @@ export function RecommendationsCarousel() {
 
     return (
         <div className="recommendations-stack-container" style={{
-            height: '100px',
+            height: '180px',
             position: 'relative',
             perspective: '1000px',
-            marginTop: '40px',
-            marginBottom: '100px'
+            marginTop: '20px',
+            marginBottom: '40px'
         }}>
             {visibleItems.map(({ item, index }) => {
                 const isTop = index === 0;
@@ -62,11 +62,11 @@ export function RecommendationsCarousel() {
                         style={{
                             position: 'absolute',
                             width: '90%',
-                            height: '100%',
+                            height: '70%',
                             cursor: isTop ? 'pointer' : 'default',
                             zIndex: 100 - index,
-                            transform: `translateZ(${-index * 40}px) translateY(${index * 10}px)`,
-                            opacity: 1 - index * 0.25,
+                            transform: `translateZ(${-index * 30}px) translateY(${index * 10}px)`,
+                            opacity: 1 - index * 0.2,
                             transition: exitDirection ? 'none' : 'all 0.5s ease',
                             display: 'flex',
                             flexDirection: 'column',
@@ -76,25 +76,37 @@ export function RecommendationsCarousel() {
                         }}
                     >
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                            <FaQuoteLeft style={{ color: '#fda085', opacity: 0.5, flexShrink: 0 }} size={24} />
-                            <div>
+                            <FaQuoteLeft style={{ color: '#fda085', opacity: 0.2, flexShrink: 0, marginTop: '4px' }} size={20} />
+                            <div style={{ flex: 1 }}>
                                 <p style={{
                                     fontStyle: 'italic',
                                     fontSize: '0.95rem',
-                                    margin: '0 0 12px 0',
+                                    margin: 0,
                                     display: '-webkit-box',
-                                    WebkitLineClamp: 4,
+                                    WebkitLineClamp: 2,
                                     WebkitBoxOrient: 'vertical',
                                     overflow: 'hidden',
-                                    lineHeight: '1.6',
+                                    lineHeight: '1.5',
                                     fontWeight: 400,
-                                    opacity: 0.9
+                                    opacity: 0.85
                                 }}>
                                     {item.text}
                                 </p>
-                                <span style={{ fontWeight: 700, fontSize: '0.9rem', color: '#fda085' }}>
-                                    — {item.name}
-                                </span>
+                                <div style={{ marginTop: '12px' }}>
+                                    <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#fda085' }}>
+                                        {item.name}
+                                    </div>
+                                    {(item.position || item.company) && (
+                                        <div style={{
+                                            fontSize: '0.75rem',
+                                            opacity: 0.6,
+                                            marginTop: '2px',
+                                            fontWeight: 500
+                                        }}>
+                                            {item.position}{item.position && item.company ? ' · ' : ''}{item.company}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,8 +180,21 @@ export function RecommendationsCarousel() {
                         }}>
                             {selectedRec.text}
                         </p>
-                        <div style={{ borderTop: '2px solid rgba(128, 128, 128, 0.2)', paddingTop: '24px' }}>
-                            <h4 style={{ color: '#fda085', margin: 0, fontSize: '1.2rem', fontWeight: 800 }}>{selectedRec.name}</h4>
+                        <div style={{ borderTop: '2px solid rgba(128, 128, 128, 0.1)', paddingTop: '24px' }}>
+                            <h4 style={{ color: '#fda085', margin: 0, fontSize: '1.2rem', fontWeight: 700 }}>{selectedRec.name}</h4>
+                            {(selectedRec.position || selectedRec.company) && (
+                                <p style={{
+                                    margin: '4px 0 0 0',
+                                    opacity: 0.7,
+                                    fontSize: '0.9rem',
+                                    fontWeight: 500,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '4px'
+                                }}>
+                                    {selectedRec.position}{selectedRec.position && selectedRec.company ? ' · ' : ''}{selectedRec.company}
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>,
