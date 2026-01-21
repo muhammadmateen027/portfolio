@@ -1,5 +1,4 @@
-// ThemeProvider.tsx
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useMemo, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 export type Theme = 'light' | 'dark';
@@ -13,13 +12,27 @@ const ThemeContext = createContext<{
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [theme, setTheme] = useState<Theme>('light');
+    const [theme, setTheme] = useState<Theme>(() => {
+        const saved = localStorage.getItem('theme') as Theme;
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    });
+
+    useEffect(() => {
+        const root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        root.style.colorScheme = theme;
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    // Update if system preference changes and user hasn't set one? 
+    // Usually it's better to just stick to what the user chose or the initial system state.
 
     const value = useMemo(() => ({ theme, setTheme }), [theme]);
 
     return (
         <ThemeContext.Provider value={value}>
-            <div data-theme={theme}>
+            <div data-theme={theme} className="theme-wrapper">
                 {children}
             </div>
         </ThemeContext.Provider>

@@ -1,13 +1,10 @@
-div[data-theme] {
+[data-theme] {
     min-height: 100vh;
     width: 100%;
-    transition: background 0.2s ease, color 0.15s ease;
+    transition: background 0.3s ease, color 0.15s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center children like main-content */
-    background: inherit;
-    /* This will inherit the linear-gradient from the above selectors */
     background-attachment: fixed;
     overflow-x: hidden;
     position: relative;
