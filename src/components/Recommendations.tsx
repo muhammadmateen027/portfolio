@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { usePortfolioData } from './DataContext';
 import type { RecommendationItem } from './DataContext';
 import { FaQuoteLeft, FaTimes } from 'react-icons/fa';
@@ -22,16 +23,17 @@ export function RecommendationsCarousel() {
     return (
         <div style={{ margin: '20px 0 40px 0', position: 'relative' }}>
             <div
+                key={currentIndex}
                 className="recommendation-teaser glass-card"
                 onClick={() => setSelectedRec(current)}
                 style={{
                     cursor: 'pointer',
-                    animation: 'fadeInOut 5s infinite',
                     minHeight: '120px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    borderLeft: '4px solid #fda085'
+                    borderLeft: '4px solid #fda085',
+                    animation: 'recommendationFadeIn 0.8s ease-out forwards'
                 }}
             >
                 <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
@@ -56,57 +58,64 @@ export function RecommendationsCarousel() {
                 </div>
             </div>
 
-            {selectedRec && (
+            {selectedRec && createPortal(
                 <div
                     style={{
                         position: 'fixed',
                         top: 0,
                         left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        width: '100vw',
+                        height: '100vh',
+                        backgroundColor: 'rgba(0,0,0,0.85)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        zIndex: 2000,
-                        backdropFilter: 'blur(5px)'
+                        zIndex: 10000,
+                        backdropFilter: 'blur(16px)',
+                        padding: '20px',
+                        boxSizing: 'border-box'
                     }}
                     onClick={() => setSelectedRec(null)}
                 >
                     <div
-                        className="glass-card"
+                        className="glass-card modal-container"
                         style={{
-                            maxWidth: '600px',
-                            width: '90%',
+                            maxWidth: '620px',
+                            width: '100%',
                             position: 'relative',
-                            padding: '40px',
-                            maxHeight: '80vh',
+                            padding: '48px 40px',
+                            maxHeight: '90vh',
                             overflowY: 'auto',
-                            background: 'var(--card-bg, #fff)'
+                            margin: 'auto',
+                            animation: 'modalFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                            boxShadow: '0 30px 60px rgba(0, 0, 0, 0.5)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)'
                         }}
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             onClick={() => setSelectedRec(null)}
-                            style={{
-                                position: 'absolute',
-                                top: '15px',
-                                right: '15px',
-                                background: 'none',
-                                border: 'none',
-                                cursor: 'pointer',
-                                color: 'inherit'
-                            }}
+                            aria-label="Close"
+                            className="modal-close-button"
                         >
-                            <FaTimes size={20} />
+                            <FaTimes size={24} />
                         </button>
-                        <FaQuoteLeft style={{ color: '#fda085', marginBottom: '20px' }} size={32} />
-                        <p style={{ fontStyle: 'italic', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px' }}>
+                        <FaQuoteLeft style={{ color: '#fda085', marginBottom: '24px', opacity: 0.8 }} size={48} />
+                        <p style={{
+                            fontStyle: 'italic',
+                            fontSize: '1.25rem',
+                            lineHeight: '1.7',
+                            marginBottom: '32px',
+                            fontWeight: 500
+                        }}>
                             {selectedRec.text}
                         </p>
-                        <h4 style={{ color: '#fda085', margin: 0 }}>{selectedRec.name}</h4>
+                        <div style={{ borderTop: '2px solid rgba(128, 128, 128, 0.2)', paddingTop: '24px' }}>
+                            <h4 style={{ color: '#fda085', margin: 0, fontSize: '1.2rem', fontWeight: 800 }}>{selectedRec.name}</h4>
+                        </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );

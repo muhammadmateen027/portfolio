@@ -30,7 +30,6 @@ export interface PortfolioData {
         linkedin: string;
         github: string;
         email: string;
-        phone: string;
         address: string;
     };
     profilePicture: string;
@@ -163,7 +162,6 @@ const defaultData: PortfolioData = {
         linkedin: 'https://www.linkedin.com/in/muhammadmateen027/',
         github: 'https://github.com/muhammadmateen027',
         email: 'muhammadmateen027@gmail.com',
-        phone: '(+49) 1578 – 1714068',
         address: 'Berlin, Germany',
     },
     profilePicture: 'https://media.licdn.com/dms/image/D4E03AQE-W_G9_9_9-A/profile-displayphoto-shrink_800_800/0/1691585433120?e=1710374400&v=beta&t=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',

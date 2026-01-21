@@ -1,5 +1,5 @@
 import { usePortfolioData } from './DataContext';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export function ImportantLinks() {
     const { links } = usePortfolioData();
@@ -21,9 +21,6 @@ export function ImportantLinks() {
             <a href={`mailto:${links.email}`} className="hero-link email-link">
                 <FaEnvelope /> Email
             </a>
-            <div className="hero-link phone-link" style={{ cursor: 'default' }}>
-                <FaPhone /> {links.phone}
-            </div>
             <div className="hero-link address-link" style={{ cursor: 'default' }}>
                 <FaMapMarkerAlt /> {links.address}
             </div>

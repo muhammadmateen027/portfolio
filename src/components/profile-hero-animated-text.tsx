@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 const phrases = [
     'Flutter expert',
     'Father',
-    'Senior Software Engineer',
+    'Software Engineer',
     'Good Listener',
     'Solution provider',
 ];
