@@ -56,13 +56,6 @@ function useIsDarkTheme() {
 
 export function TypingAnimatedSubtitle() {
     const isDark = useIsDarkTheme();
-    const phrases = useMemo(() => [
-        'Senior Mobile Engineer',
-        'Flutter Specialist',
-        'Android Developer',
-        'Tech Lead',
-        'Problem Solver',
-    ], []);
     const [index, setIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [typing, setTyping] = useState(true);
