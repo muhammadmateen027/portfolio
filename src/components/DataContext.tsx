@@ -164,7 +164,7 @@ const defaultData: PortfolioData = {
         email: 'muhammadmateen027@gmail.com',
         address: 'Berlin, Germany',
     },
-    profilePicture: 'https://media.licdn.com/dms/image/D4E03AQE-W_G9_9_9-A/profile-displayphoto-shrink_800_800/0/1691585433120?e=1710374400&v=beta&t=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    profilePicture: 'https://github.com/muhammadmateen027.png',
 };
 
 export const DataContext = createContext<PortfolioData>(defaultData);
