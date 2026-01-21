@@ -8,57 +8,98 @@ export function RecommendationsCarousel() {
     const { recommendations } = usePortfolioData();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedRec, setSelectedRec] = useState<RecommendationItem | null>(null);
+    const [exitDirection, setExitDirection] = useState<'left' | 'right' | null>(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % recommendations.length);
-        }, 5000);
+            // Randomly pick left or right for auto-swipe
+            setExitDirection(Math.random() > 0.5 ? 'right' : 'left');
+
+            setTimeout(() => {
+                setCurrentIndex((prev) => (prev + 1) % recommendations.length);
+                setExitDirection(null);
+            }, 600); // match animation duration
+        }, 6000);
         return () => clearInterval(interval);
     }, [recommendations.length]);
 
     if (recommendations.length === 0) return null;
 
-    const current = recommendations[currentIndex];
+    // Get the next few items for the stack effect
+    const getVisibleItems = () => {
+        const items = [];
+        for (let i = 0; i < Math.min(3, recommendations.length); i++) {
+            items.push({
+                item: recommendations[(currentIndex + i) % recommendations.length],
+                index: i
+            });
+        }
+        return items.reverse(); // Bottom items first in DOM
+    };
+
+    const visibleItems = getVisibleItems();
 
     return (
-        <div style={{ margin: '20px 0 40px 0', position: 'relative' }}>
-            <div
-                key={currentIndex}
-                className="recommendation-teaser glass-card"
-                onClick={() => setSelectedRec(current)}
-                style={{
-                    cursor: 'pointer',
-                    minHeight: '120px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    borderLeft: '4px solid #fda085',
-                    animation: 'recommendationFadeIn 0.8s ease-out forwards'
-                }}
-            >
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                    <FaQuoteLeft style={{ color: '#fda085', opacity: 0.5, flexShrink: 0 }} size={24} />
-                    <div>
-                        <p style={{
-                            fontStyle: 'italic',
-                            fontSize: '0.9rem',
-                            margin: '0 0 8px 0',
-                            display: '-webkit-box',
-                            WebkitLineClamp: 3,
-                            WebkitBoxOrient: 'vertical',
-                            overflow: 'hidden',
-                            lineHeight: '1.5',
-                            fontWeight: 400,
-                            opacity: 0.9
-                        }}>
-                            {current.text}
-                        </p>
-                        <span style={{ fontWeight: 600, fontSize: '0.85rem', color: '#fda085' }}>
-                            — {current.name}
-                        </span>
+        <div className="recommendations-stack-container" style={{
+            height: '100px',
+            position: 'relative',
+            perspective: '1000px',
+            marginTop: '40px',
+            marginBottom: '100px'
+        }}>
+            {visibleItems.map(({ item, index }) => {
+                const isTop = index === 0;
+                let className = "recommendation-card glass-card";
+                if (isTop && exitDirection) {
+                    className += ` exit-${exitDirection}`;
+                }
+
+                return (
+                    <div
+                        key={`${item.name}-${currentIndex + index}`}
+                        className={className}
+                        onClick={() => isTop && setSelectedRec(item)}
+                        style={{
+                            position: 'absolute',
+                            width: '90%',
+                            height: '100%',
+                            cursor: isTop ? 'pointer' : 'default',
+                            zIndex: 100 - index,
+                            transform: `translateZ(${-index * 40}px) translateY(${index * 10}px)`,
+                            opacity: 1 - index * 0.25,
+                            transition: exitDirection ? 'none' : 'all 0.5s ease',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            borderLeft: isTop ? '4px solid #fda085' : '1px solid rgba(255,255,255,0.1)',
+                            padding: '24px'
+                        }}
+                    >
+                        <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                            <FaQuoteLeft style={{ color: '#fda085', opacity: 0.5, flexShrink: 0 }} size={24} />
+                            <div>
+                                <p style={{
+                                    fontStyle: 'italic',
+                                    fontSize: '0.95rem',
+                                    margin: '0 0 12px 0',
+                                    display: '-webkit-box',
+                                    WebkitLineClamp: 4,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden',
+                                    lineHeight: '1.6',
+                                    fontWeight: 400,
+                                    opacity: 0.9
+                                }}>
+                                    {item.text}
+                                </p>
+                                <span style={{ fontWeight: 700, fontSize: '0.9rem', color: '#fda085' }}>
+                                    — {item.name}
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                );
+            })}
 
             {selectedRec && createPortal(
                 <div
@@ -99,13 +140,28 @@ export function RecommendationsCarousel() {
                             onClick={() => setSelectedRec(null)}
                             aria-label="Close"
                             className="modal-close-button"
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'rgba(255,255,255,0.1)',
+                                border: 'none',
+                                borderRadius: '50%',
+                                color: 'white',
+                                width: '36px',
+                                height: '36px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                cursor: 'pointer'
+                            }}
                         >
-                            <FaTimes size={24} />
+                            <FaTimes size={18} />
                         </button>
                         <FaQuoteLeft style={{ color: '#fda085', marginBottom: '24px', opacity: 0.8 }} size={48} />
                         <p style={{
                             fontStyle: 'italic',
-                            fontSize: '1.25rem',
+                            fontSize: '1.1rem',
                             lineHeight: '1.7',
                             marginBottom: '32px',
                             fontWeight: 500

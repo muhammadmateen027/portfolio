@@ -67,3 +67,35 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* Recommendation Stack Animations */
+.recommendation-card {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.recommendation-card.exit-right {
+    animation: swipeRight 0.6s forwards ease-out;
+}
+
+.recommendation-card.exit-left {
+    animation: swipeLeft 0.6s forwards ease-out;
+}
+
+@keyframes swipeRight {
+    0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+    100% { transform: translate(150%, -20%) rotate(20deg); opacity: 0; }
+}
+
+@keyframes swipeLeft {
+    0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+    100% { transform: translate(-150%, -20%) rotate(-20deg); opacity: 0; }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes recommendationFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -95,7 +95,7 @@
 .profile-hero-animated-subtitle {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #fda085;
+    color: #000;
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.4s cubic-bezier(.23, 1.01, .32, 1), transform 0.4s cubic-bezier(.23, 1.01, .32, 1);
@@ -106,6 +106,7 @@
     width: 100%;
     text-align: center;
     pointer-events: none;
+    white-space: nowrap;
 }
 
 .profile-hero-animated-subtitle.in {
@@ -120,7 +121,7 @@
 }
 
 [data-theme='dark'] .profile-hero-animated-subtitle {
-    color: #f6d365;
+    color: #fff;
 }
 
 .profile-hero-static-subtitle-row {
@@ -149,7 +150,7 @@
 .profile-hero-typing-cursor {
     display: inline-block;
     width: 1ch;
-    color: #fda085;
+    color: inherit;
     animation: blink 1s steps(1) infinite;
     font-weight: 700;
     font-size: 1.2rem;

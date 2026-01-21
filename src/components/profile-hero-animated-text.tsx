@@ -1,5 +1,5 @@
 // profile-hero-animated-text.tsx
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const phrases = [
     'Flutter expert',
@@ -41,11 +41,11 @@ export function AnimatedSubtitle() {
 function useIsDarkTheme() {
     const [isDark, setIsDark] = useState(false);
     useEffect(() => {
-        const check = () => setIsDark(document.body.getAttribute('data-theme') === 'dark');
+        const check = () => setIsDark(document.documentElement.getAttribute('data-theme') === 'dark');
         check();
         window.addEventListener('themechange', check);
         const observer = new MutationObserver(check);
-        observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
         return () => {
             window.removeEventListener('themechange', check);
             observer.disconnect();
@@ -92,7 +92,13 @@ export function TypingAnimatedSubtitle() {
         <span
             className={`profile-hero-animated-subtitle${visible ? ' in' : ' out'}`}
             aria-live="polite"
-            style={{ minWidth: 180, color: isDark ? '#f6d365' : '#000', fontWeight: 700, fontSize: '1.2rem' }}
+            style={{
+                minWidth: 180,
+                color: isDark ? '#fff' : '#000',
+                fontWeight: 700,
+                fontSize: '1.2rem',
+                whiteSpace: 'nowrap'
+            }}
         >
             <span style={{ color: gray, fontWeight: 600 }}>is </span>
             {displayed}

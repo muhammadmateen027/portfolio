@@ -25,6 +25,16 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         localStorage.setItem('theme', theme);
     }, [theme]);
 
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = (e: MediaQueryListEvent) => {
+            setTheme(e.matches ? 'dark' : 'light');
+        };
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
+
     // Update if system preference changes and user hasn't set one? 
     // Usually it's better to just stick to what the user chose or the initial system state.
 
