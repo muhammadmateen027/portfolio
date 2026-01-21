@@ -41,17 +41,19 @@ export function RecommendationsCarousel() {
                     <div>
                         <p style={{
                             fontStyle: 'italic',
-                            fontSize: '0.95rem',
+                            fontSize: '0.9rem',
                             margin: '0 0 8px 0',
                             display: '-webkit-box',
-                            WebkitLineClamp: 2,
+                            WebkitLineClamp: 3,
                             WebkitBoxOrient: 'vertical',
                             overflow: 'hidden',
-                            lineHeight: '1.4'
+                            lineHeight: '1.5',
+                            fontWeight: 400,
+                            opacity: 0.9
                         }}>
                             {current.text}
                         </p>
-                        <span style={{ fontWeight: 700, fontSize: '0.85rem', color: '#fda085' }}>
+                        <span style={{ fontWeight: 600, fontSize: '0.85rem', color: '#fda085' }}>
                             — {current.name}
                         </span>
                     </div>

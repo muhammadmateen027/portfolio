@@ -124,12 +124,13 @@ div[data-theme] {
 /* Mobile Responsiveness for Chips and Container */
 @media (max-width: 480px) {
     .main-content {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
-        padding: 20px 15px;
+        width: 95%;
+        margin: 10px auto;
+        border-radius: 20px;
+        padding: 24px 16px;
         min-height: 100vh;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     .chip-gradient {
@@ -244,6 +245,7 @@ h2 {
 
 .recommendation-teaser {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: normal;
 }
 
 .recommendation-teaser:hover {
