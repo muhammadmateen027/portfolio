@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { ProjectItem } from './DataContext';
+import type { ProjectItem } from '../DataContext/DataContext';
 import { FaChevronDown, FaChevronUp, FaExternalLinkAlt } from 'react-icons/fa';
 
 export function ProjectCard({ project }: { project: ProjectItem }) {

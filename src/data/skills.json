@@ -1,29 +1,56 @@
 [
-    "Flutter",
-    "Dart",
-    "Android",
-    "Kotlin",
-    "Java",
-    "Node.js",
-    "JavaScript",
-    "ES6",
-    "PHP",
-    "C++",
-    "Redux",
-    "BLoC",
-    "GetX",
-    "VIPER",
-    "NodeJS",
-    "Express.js",
-    "Laravel",
-    "Firebase",
-    "PostgreSQL",
-    "MongoDB",
-    "CI/CD",
-    "Codemagic",
-    "Bitrise",
-    "Fastlane",
-    "Cloud Messaging",
-    "GPS Tracking",
-    "Rest Services"
+    {
+        "category": "Mobile Development",
+        "items": [
+            "Flutter",
+            "Dart",
+            "Android",
+            "Kotlin",
+            "Java",
+            "Cloud Messaging",
+            "GPS Tracking"
+        ]
+    },
+    {
+        "category": "Web & Backend",
+        "items": [
+            "Node.js",
+            "JavaScript",
+            "ES6",
+            "TypeScript",
+            "PHP",
+            "Express.js",
+            "Laravel",
+            "Rest Services"
+        ]
+    },
+    {
+        "category": "State Management",
+        "items": [
+            "Redux",
+            "BLoC",
+            "GetX",
+            "VIPER"
+        ]
+    },
+    {
+        "category": "Database & Cloud",
+        "items": [
+            "Firebase",
+            "PostgreSQL",
+            "MongoDB",
+            "NoSQL"
+        ]
+    },
+    {
+        "category": "DevOps & Tools",
+        "items": [
+            "CI/CD",
+            "Codemagic",
+            "Bitrise",
+            "Fastlane",
+            "Git",
+            "Docker"
+        ]
+    }
 ]

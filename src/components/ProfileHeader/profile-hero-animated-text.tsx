@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { usePortfolioData } from './DataContext';
+import { usePortfolioData } from '../DataContext/DataContext';
 
 export function AnimatedSubtitle() {
     const { phrases } = usePortfolioData();

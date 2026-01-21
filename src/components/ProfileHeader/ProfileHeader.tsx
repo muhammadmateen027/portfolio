@@ -1,4 +1,4 @@
-import { usePortfolioData } from './DataContext';
+import { usePortfolioData } from '../DataContext/DataContext';
 import './profile-hero.css';
 import { TypingAnimatedSubtitle } from './profile-hero-animated-text';
 

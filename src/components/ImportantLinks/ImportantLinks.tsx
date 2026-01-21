@@ -1,4 +1,4 @@
-import { usePortfolioData } from './DataContext';
+import { usePortfolioData } from '../DataContext/DataContext';
 import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export function ImportantLinks() {

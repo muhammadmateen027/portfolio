@@ -1,15 +1,15 @@
 // DataContext.tsx
 import { createContext, useContext } from 'react';
 
-import profileData from '../data/profile.json';
-import experienceData from '../data/experience.json';
-import projectsData from '../data/projects.json';
-import skillsData from '../data/skills.json';
-import educationData from '../data/education.json';
-import licensesData from '../data/licenses.json';
-import recommendationsData from '../data/recommendations.json';
-import publicationsData from '../data/publications.json';
-import languagesData from '../data/languages.json';
+import profileData from '../../data/profile.json';
+import experienceData from '../../data/experience.json';
+import projectsData from '../../data/projects.json';
+import skillsData from '../../data/skills.json';
+import educationData from '../../data/education.json';
+import licensesData from '../../data/licenses.json';
+import recommendationsData from '../../data/recommendations.json';
+import publicationsData from '../../data/publications.json';
+import languagesData from '../../data/languages.json';
 
 export interface ExperienceItem {
     role: string;
@@ -32,15 +32,27 @@ export interface ProjectItem {
     links: string[];
 }
 
+export interface SkillCategory {
+    category: string;
+    items: string[];
+}
+
+export interface EducationItem {
+    degree: string;
+    university: string;
+    location: string;
+    year: string;
+}
+
 export interface PortfolioData {
     name: string;
     about: string;
     featuredProjects: string[];
     experience: ExperienceItem[];
-    education: string[];
+    education: EducationItem[];
     licenses: string[];
     projects: ProjectItem[];
-    skills: string[];
+    skills: SkillCategory[];
     recommendations: RecommendationItem[];
     publications: string[];
     languages: string[];

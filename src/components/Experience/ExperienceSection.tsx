@@ -1,10 +1,10 @@
 import './experience-timeline.css';
 import { FaBuilding, FaUserTie, FaLaptopCode, FaRocket } from 'react-icons/fa';
-import { usePortfolioData } from './DataContext';
+import { usePortfolioData } from '../DataContext/DataContext';
 
 const icons = [FaUserTie, FaBuilding, FaLaptopCode, FaRocket];
 
-function ExperienceTimelineItem({ item, isLast, idx }: { item: import('./DataContext').ExperienceItem; isLast: boolean; idx: number }) {
+function ExperienceTimelineItem({ item, isLast, idx }: { item: import('../DataContext/DataContext').ExperienceItem; isLast: boolean; idx: number }) {
     const Icon = icons[idx % icons.length];
     return (
         <div className="timeline-item">

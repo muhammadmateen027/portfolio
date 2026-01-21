@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { usePortfolioData } from './DataContext';
-import type { RecommendationItem } from './DataContext';
+import { usePortfolioData } from '../DataContext/DataContext';
+import type { RecommendationItem } from '../DataContext/DataContext';
 import { FaQuoteLeft, FaTimes } from 'react-icons/fa';
 
 export function RecommendationsCarousel() {
@@ -61,7 +61,7 @@ export function RecommendationsCarousel() {
                         onClick={() => isTop && setSelectedRec(item)}
                         style={{
                             position: 'absolute',
-                            width: '90%',
+                            width: '100%',
                             height: '70%',
                             cursor: isTop ? 'pointer' : 'default',
                             zIndex: 100 - index,
