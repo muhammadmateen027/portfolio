@@ -5,7 +5,6 @@ import { ProfileHeader } from './ProfileHeader';
 import { PromptShortcuts } from './PromptShortcuts';
 import { ExperienceSection } from './ExperienceSection';
 import React from 'react';
-import { ThemeToggle } from './ThemeProvider';
 
 function GlassCard({ children }: { children: React.ReactNode }) {
     return <div className="glass-card">{children}</div>;
@@ -38,7 +37,7 @@ const sectionOrder = [
 type SectionKey = typeof sectionOrder[number];
 
 export function MainPage() {
-    const [selected, setSelected] = useState<SectionKey | null>(null);
+    const [selected, setSelected] = useState<SectionKey>('about');
     const data = usePortfolioData();
     const sectionImages: Record<SectionKey, string> = {
         about: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
@@ -69,8 +68,11 @@ export function MainPage() {
         <div className="main-content">
             <ProfileHeader />
             <ImportantLinks />
-            <ThemeToggle />
-            <PromptShortcuts onSelect={setSelected as (key: string) => void} prompts={sectionOrder.map(key => ({ label: (sections[key].props.title as string), key }))} />
+            <PromptShortcuts
+                selectedKey={selected}
+                onSelect={setSelected as (key: string) => void}
+                prompts={sectionOrder.map(key => ({ label: (sections[key].props.title as string), key }))}
+            />
             {selected && sections[selected]}
         </div>
     );

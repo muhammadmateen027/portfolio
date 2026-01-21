@@ -32,16 +32,22 @@ export const ThemeToggle = () => {
         <button
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
             style={{
-                margin: '0 0 24px 0',
-                padding: '8px 20px',
-                borderRadius: 20,
+                position: 'fixed',
+                top: '20px',
+                right: '20px',
+                zIndex: 1000,
+                padding: '10px 16px',
+                borderRadius: '30px',
                 border: 'none',
                 background: theme === 'light' ? '#232526' : '#f6d365',
                 color: theme === 'light' ? '#fff' : '#232526',
                 fontWeight: 600,
                 cursor: 'pointer',
-                float: 'right',
-                transition: 'background 0.3s, color 0.3s',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                transition: 'all 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px'
             }}
             aria-label="Toggle theme"
         >

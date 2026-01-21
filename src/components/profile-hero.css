@@ -13,14 +13,19 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 120vw;
+    width: 100%;
     height: 340px;
     background: radial-gradient(circle at 60% 40%, #f6d365 0%, #fda085 60%, transparent 100%);
     transform: translateX(-50%);
     z-index: 0;
     filter: blur(32px) brightness(1.1);
-    opacity: 0.7;
+    opacity: 0.5;
     pointer-events: none;
+}
+
+[data-theme='dark'] .profile-hero-bg {
+    opacity: 0.3;
+    filter: blur(40px) brightness(0.8);
 }
 
 .profile-hero-img {
@@ -36,57 +41,47 @@
 }
 
 .profile-hero-title {
-    color: #000 !important;
-    background: none !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    z-index: 10 !important;
+    color: #1a1a1a;
+    z-index: 10;
     position: relative;
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: clamp(2rem, 10vw, 3rem);
+    font-weight: 900;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: -0.02em;
     animation: fadeInUp 0.7s cubic-bezier(.23, 1.01, .32, 1) 0.1s both;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: #000 !important;
-    background-clip: text !important;
-    text-fill-color: #000 !important;
+    line-height: 1.1;
 }
 
 [data-theme='dark'] .profile-hero-title {
-    color: #f6d365 !important;
-    -webkit-text-fill-color: #f6d365 !important;
-    text-fill-color: #f6d365 !important;
-}
-
-.profile-hero-title.profile-hero-title-elevated {
-    background: none !important;
-    color: #111 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
+    color: #ffffff;
 }
 
 .profile-hero-subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 8px 0;
     color: #fda085;
     z-index: 1;
     animation: fadeInUp 0.7s cubic-bezier(.23, 1.01, .32, 1) 0.3s both;
 }
 
+[data-theme='dark'] .profile-hero-subtitle {
+    color: #f6d365;
+}
+
 .profile-hero-about {
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
-    color: #444;
+    color: #4a4a4a;
     font-size: 1.1rem;
-    margin: 0 0 8px 0;
+    line-height: 1.6;
+    margin: 16px 0 0 0;
     z-index: 1;
     animation: fadeInUp 0.7s cubic-bezier(.23, 1.01, .32, 1) 0.5s both;
 }
 
 [data-theme='dark'] .profile-hero-about {
-    color: #f6d365;
+    color: #d1d1d1;
 }
 
 .profile-hero-animated-subtitle-wrapper {
@@ -182,5 +177,28 @@
     to {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+    .profile-hero {
+        min-height: auto;
+        padding-top: 20px;
+        margin-bottom: 24px;
+    }
+
+    .profile-hero-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .profile-hero-about {
+        font-size: 1rem;
+        padding: 0 10px;
     }
 }
