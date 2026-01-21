@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { usePortfolioData } from '../DataContext/DataContext';
 import type { RecommendationItem } from '../DataContext/DataContext';
 import { FaQuoteLeft, FaTimes } from 'react-icons/fa';
+import './recommendations.css';
 
 export function RecommendationsCarousel() {
     const { recommendations } = usePortfolioData();
@@ -12,20 +13,18 @@ export function RecommendationsCarousel() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Randomly pick left or right for auto-swipe
             setExitDirection(Math.random() > 0.5 ? 'right' : 'left');
 
             setTimeout(() => {
                 setCurrentIndex((prev) => (prev + 1) % recommendations.length);
                 setExitDirection(null);
-            }, 600); // match animation duration
+            }, 600);
         }, 6000);
         return () => clearInterval(interval);
     }, [recommendations.length]);
 
     if (recommendations.length === 0) return null;
 
-    // Get the next few items for the stack effect
     const getVisibleItems = () => {
         const items = [];
         for (let i = 0; i < Math.min(3, recommendations.length); i++) {
@@ -34,19 +33,13 @@ export function RecommendationsCarousel() {
                 index: i
             });
         }
-        return items.reverse(); // Bottom items first in DOM
+        return items.reverse();
     };
 
     const visibleItems = getVisibleItems();
 
     return (
-        <div className="recommendations-stack-container" style={{
-            height: '180px',
-            position: 'relative',
-            perspective: '1000px',
-            marginTop: '20px',
-            marginBottom: '40px'
-        }}>
+        <div className="recommendations-stack-container">
             {visibleItems.map(({ item, index }) => {
                 const isTop = index === 0;
                 let className = "recommendation-card glass-card";
@@ -60,19 +53,11 @@ export function RecommendationsCarousel() {
                         className={className}
                         onClick={() => isTop && setSelectedRec(item)}
                         style={{
-                            position: 'absolute',
-                            width: '100%',
-                            height: '70%',
-                            cursor: isTop ? 'pointer' : 'default',
                             zIndex: 100 - index,
-                            transform: `translateZ(${-index * 30}px) translateY(${index * 10}px)`,
-                            opacity: 1 - index * 0.2,
-                            transition: exitDirection ? 'none' : 'all 0.5s ease',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
+                            transform: `translateX(-50%) translateZ(${-index * 40}px) translateY(${index * 12}px)`,
+                            opacity: 1 - index * 0.25,
                             borderLeft: isTop ? '4px solid #fda085' : '1px solid rgba(255,255,255,0.1)',
-                            padding: '24px'
+                            cursor: isTop ? 'pointer' : 'default',
                         }}
                     >
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>

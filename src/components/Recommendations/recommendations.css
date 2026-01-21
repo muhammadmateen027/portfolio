@@ -1,0 +1,66 @@
+.recommendations-stack-container {
+    height: 180px;
+    position: relative;
+    perspective: 1000px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.recommendation-card {
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (max-width: 768px) {
+    .recommendations-stack-container {
+        height: 200px;
+        margin-bottom: 60px;
+    }
+
+    .recommendation-card {
+        width: 92%;
+        padding: 20px;
+        height: 90%;
+    }
+}
+
+.recommendation-card.exit-right {
+    animation: swipeRight 0.6s forwards ease-out;
+}
+
+.recommendation-card.exit-left {
+    animation: swipeLeft 0.6s forwards ease-out;
+}
+
+@keyframes swipeRight {
+    0% {
+        transform: translate(-50%, 0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(150%, -20%) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes swipeLeft {
+    0% {
+        transform: translate(-50%, 0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-150%, -20%) rotate(-20deg);
+        opacity: 0;
+    }
+}
