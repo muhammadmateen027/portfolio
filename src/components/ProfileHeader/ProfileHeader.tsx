@@ -12,7 +12,13 @@ export function ProfileHeader() {
             <h2 className="profile-hero-subtitle profile-hero-animated-subtitle-wrapper">
                 <TypingAnimatedSubtitle />
             </h2>
-            <p className="profile-hero-about">{about}</p>
+            <p
+                className="profile-hero-about"
+                style={{ whiteSpace: 'pre-wrap' }}
+                dangerouslySetInnerHTML={{
+                    __html: about.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                }}
+            />
         </div>
     );
 }

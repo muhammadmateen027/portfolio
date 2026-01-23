@@ -1,6 +1,6 @@
 {
     "name": "Muhammad Mateen",
-    "about": "Software engineer with specialty in product development looking to join an organization where strong project management and analytical skills will be useful in the delivery of products which meet user needs.\n\n8+ years of professional experience in Mobile Apps Development, specializing in Hybrid Mobile Applications using Flutter with Dart. Experienced in CI/CD processes (Codemagic, Bitrise, Fastlane) and end-to-end implementation of Android, Joget Workflow, and NodeJS.",
+    "about": "For the past **8+ years**, **Mateen** has been building the future of mobile through **Flutter** and **Hybrid** technologies. He is a specialist in **end-to-end implementation**—bridging the gap between **front-end aesthetics** and **back-end logic** with **NodeJS**, all while ensuring flawless delivery through **CI/CD excellence**.\n\nBeyond the codebase, he brings the same dedication to his personal passions:\n\n🎮 **Gaming**: He enjoys jumping into a good game on his PS5 to unwind.\n👨‍👩‍👦 **Family**: He’s a proud father who stays busy with the day-to-day joys of raising a kid.\n🍳 **Cooking**: He likes getting into the kitchen and trying out new recipes.\n🛣️ **Driving**: He loves hitting the road for a long drive to clear his head.\n\nHe is currently looking for his **next challenge** where he can apply his **project management expertise** and **technical vision** to build products that users love.",
     "links": {
         "linkedin": "https://www.linkedin.com/in/muhammadmateen027/",
         "github": "https://github.com/muhammadmateen027",
@@ -9,16 +9,19 @@
     },
     "profilePicture": "https://github.com/muhammadmateen027.png",
     "featuredProjects": [
-        "Aware",
+        "Aware Health GmbH",
+        "Jaxon - eSports News & Videos",
         "Teleportal Logistics",
-        "Expensense Pro"
+        "CrimeDoor"
     ],
     "phrases": [
         "Flutter expert",
         "Father",
-        "Software Engineer",
+        "Senior Software Engineer",
         "Good Listener",
-        "Solution provider"
+        "Product Specialist",
+        "Solution provider",
+        "Lifelong Learner"
     ],
     "sectionOrder": [
         "experience",

@@ -1,116 +1,35 @@
-[
-    {
-        "name": "Dario Penic",
-        "position": "Team Lead",
-        "company": "Aware Health GmbH",
-        "text": "I had the pleasure of working with Mateen on our mobile team. He is a highly skilled Flutter engineer who made a significant impact through his technical expertise and ownership of key features. Mateen played a key role in architecture discussions, ensuring our mobile codebase was clean and easy to maintain. He also worked closely with the backend team, proactively defining JSON responses and improving workflows.His ability to take ownership of complex tasks and consistently deliver high-quality code made a real difference to our team. I appreciated his contributions and the dedication he brought to our work."
-    },
-    {
-        "name": "Habib Rahal",
-        "position": "Senior Designer",
-        "company": "Upday GmbH",
-        "text": "Mateen and I worked on many features so far, and he's consistently demonstrating exceptional qualities as a mobile engineer. He always provides valuable constructive input and suggestions effectively elevating our solutions, and enabling us to achieve better user experience and interactions. He's a very proactive engineer, with a deep knowledge in Flutter, and a collaborative positive attitude."
-    },
-    {
-        "name": "Galina Gainetdinova",
-        "position": "QA Engineer",
-        "company": "Upday GmbH",
-        "text": "Mateen is an excellent Mobile Flutter Developer whose passion for creating seamless, high-performing apps truly stands out. I had the pleasure of working with Mateen at Aware, where he consistently delivered clean, efficient, and innovative code. His deep understanding of Flutter, Dart, and mobile development best practices allowed our team to launch a smooth, cross-platform application on time and with outstanding performance. Mateen is a perfect fit for any team looking for a talented and reliable Flutter developer who brings creativity, attention to detail, and a genuine passion for building great mobile experiences."
-    },
-    {
-        "name": "Filippo Palmieri",
-        "position": "Product",
-        "company": "Aware Health GmbH",
-        "text": "I had the pleasure of working with Mateen on multiple projects, and I can confidently say he's an exceptional Mobile Engineer. His deep technical knowledge, combined with his positive attitude, hard work, and proactiveness, always stood out. Mateen consistently brought innovative ideas and solutions to the table, often anticipating challenges before they arose. His collaborative spirit and dedication made him a joy to work with, and I have no doubt he'll continue to excel in his career."
-    },
-    {
-        "name": "Martin Schlegel",
-        "position": "Mobile Developer",
-        "company": "Aware Health GmbH",
-        "text": "I was working closely together with Mateen for 1.5 years now. In that time he had major influences in the architectural improvements of our flutter app. Besides of the high quality and in time implementation of new features requested by the product team, he showed big interest in the general improvement of our code base. Often time we had enlightening discussions about different approaches, gave each other valuable feedback and improved us as mobile engineers. He also took over the responsibility and ownership of several existing technical limitations and came up with valuable solution focused proposals. All in all, he is an excellent mobile engineer and I am sure he will have a positive impact for any team he may join in the future."
-    },
-    {
-        "name": "Katharina Seidlitz",
-        "position": "Product Manager",
-        "company": "Aware Health GmbH",
-        "text": "I've had the pleasure of working with Mateen for the past year. What stands out to me the most is his proactive and solution-oriented approach. His keen eye for UX improvements and dedication to raising the product's quality made a real impact on our work together. I have no doubt that he is a valuable addition to any team!"
-    },
-    {
-        "name": "Luca Concetti",
-        "position": "Product Designer",
-        "company": "Upday GmbH",
-        "text": "I worked with Mateen for more than 1 year and I really liked his precision to deliver always the best product possible. For me Mateen stands out for being really proactive and suggesting solutions even in other fields like design."
-    },
-    {
-        "name": "Jorge Melgar",
-        "position": "Product Manager",
-        "company": "Somnio Software",
-        "text": "I had the opportunity to work with Mateen for close to 6 months and he's unbelievable. Professionally speaking he's always questioning the status quo and looking for better ways to deliver not only technically speaking but also at process level. He doesn't hesitate and suggests improvements wherever he sees room for. Personally speaking he's a great human being who's not afraid of assuming and leading challenging activities while interacting with others from the very same position considering himself always as an equal to the others. I strongly recommend engaging with him."
-    },
-    {
-        "name": "Abhishek Doshi",
-        "position": "Google Developer Expert",
-        "company": "Somnio Software",
-        "text": "I have been working with Mateen for a long time now and I must say that the way he approaches the problem is definitely something different. The way he does research on specific critical topics and takes leadership as and when required has been a commendable task! The knowledge of Flutter that he has and the willingness to experiment about new things is also something different and very rare."
-    },
-    {
-        "name": "Prasant Kumar",
-        "position": "Senior Software Engineer",
-        "company": "Airasia (Teleport)",
-        "text": "Mateen is a great professional to work with. We worked together at Airasia (Teleport) and he helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. He goes out of his way when you ask for some help and guidance. His deliveries were always very well executed, on time and flawless. He was an inspiration to the rest of us as he always went the extra mile and found great ways to quickly solve problems. Thanks a lot, Mateen ! You made the transition relatively smooth for me and was very helpful."
-    },
-    {
-        "name": "Omid Bicker",
-        "position": "Former Engineering Director",
-        "company": "Aware Health GmbH",
-        "text": "I wanted to take a moment to share my appreciation for the incredible work you've been doing here at Aware. Your expertise and dedication as a Senior Flutter Developer have not only propelled our projects but have also set a benchmark for quality. Your knack for Flutter is nothing short of impressive. The way you've harnessed Dart and Flutter to craft applications that are both powerful and user-friendly is a testament to your skill and dedication. It's clear that you're not just coding; you're creating experiences that users love, and that's a rare talent. What stands out to me, even more, is your commitment to code quality. You've shown time and again that good enough isn't good enough for you. Your pursuit of quality, ensuring every line of code is clean, efficient, and maintainable, has truly raised the bar for all of us. But it's not just your technical skills that make you such a valuable team member. Your ability to communicate, share knowledge, and foster a positive team environment has made a significant impact. Your enthusiasm and solution-focused approach have made working together not just productive but also enjoyable. I'm genuinely excited to see where your talents will take you, Mohammad. I have no doubt that you'll continue to achieve great things and inspire those lucky enough to work alongside you."
-    },
-    {
-        "name": "Marcos Tort",
-        "position": "Mobile dev. Flutter",
-        "company": "Somnio Software",
-        "text": "I have worked with Mateen and I can attest to his exceptional communication skills, effectiveness, and professionalism. Muhammad's attention to detail and warm personality make him an excellent team player, and his work is always of high quality. It was a pleasure working with him, and I have no doubt that he will excel in any future endeavors."
-    },
-    {
-        "name": "Federico Pérez García",
-        "position": "Mobile Developer",
-        "company": "Somnio Software",
-        "text": "I have worked with Mateen in several projects now, and so far I must say it has always been a pleasure. He is really good at analyzing new problems and tackling them like they are nothing. Also a very good teammate, always ready to help and collaborate. Mateen is a great asset to any team."
-    },
-    {
-        "name": "Woei Chen Chow",
-        "position": "UX Designer",
-        "company": "AirAsia Malaysia",
-        "text": "I worked with Mateen in Flutter mobile application project, his capabilities in constructing the framework and executing the development is outstanding. He has solid understandings and excellent skills on mobile application development especially in Flutter, he is a fast learner as well. He has an excellent rapport with us, and we enjoy working with him. Apart of the work side, he is an easy going person with great personality."
-    },
-    {
-        "name": "Eng Shan Tay",
-        "position": "Project Management",
-        "company": "AirAsia Malaysia",
-        "text": "Mateen is very experienced and I would call him an expert in software engineer background. He is great at solving problems and providing good solutions as well as having a great personality. He would always try to explain the concept and his solutions in easy terms for non-tech background people as well. Overall, I have a great experience working with Mateen."
-    },
-    {
-        "name": "Syed Salman Ali Kazmi",
-        "position": "DevOps & Data Leader",
-        "company": "AirAsia Malaysia",
-        "text": "Mateen is young and brilliant. He already accomplished a lot in a small amount of time. He has great technical skills in computer science field leaned doing real projects. He also have soft skills learned while working with different people and communities. I worked with him several times and I can say he is precise, funny and professional."
-    },
-    {
-        "name": "Ahmad Hassan Chaudhry",
-        "position": "CEO",
-        "company": "Cognitive Healthcare International",
-        "text": "Mateen is a very capable person. He has a very good attitude towards work and is a pleasant colleague to work with. His willingness to help even when he had left us is highly appreciated !"
-    },
-    {
-        "name": "Shubana Vijaya Kumar",
-        "position": "Senior Software Engineer",
-        "company": "Freelance",
-        "text": "Mateen is a hard working person with solid problem solving and technical skills. He's able to complete the work assigned to him on time. Overall, he is a talented person and simply that good."
-    },
-    {
-        "name": "Alif , Md. Arifur Rahman",
-        "position": "Software Engineer",
-        "company": "Freelance",
-        "text": "Mateen is a guy who loves his work and he will do about almost everything to fulfill his task. He is always curious to learn new things. I will always recommend him for a better place and i wish him a great success in his life."
-    }
-]
+{
+    "title": "Clients/colleagues say about me:",
+    "items": [
+        {
+            "name": "Dario Penic",
+            "position": "Team Lead",
+            "company": "Aware Health GmbH",
+            "text": "I had the pleasure of working with Mateen on our mobile team. He is a highly skilled Flutter engineer who made a significant impact through his technical expertise and ownership of key features. Mateen played a key role in architecture discussions, ensuring our mobile codebase was clean and easy to maintain. He also worked closely with the backend team, proactively defining JSON responses and improving workflows.His ability to take ownership of complex tasks and consistently deliver high-quality code made a real difference to our team. I appreciated his contributions and the dedication he brought to our work."
+        },
+        {
+            "name": "Habib Rahal",
+            "position": "Senior Designer",
+            "company": "Aware Health GmbH",
+            "text": "I worked along with Mateen on multiple projects at aware and had the chance to witness his diligence first hand. He works well under pressure and is able to meet his deadlines regardless of the technical challenges he may face. Mateen is also exceptionally consistent and shows strong ownership over the tasks he works on. On a personal level he is and also a pleasure to work with, given his great sense of humor and overall positivity. I’d recommend him highly!"
+        },
+        {
+            "name": "Saifullah",
+            "position": "Senior Flutter Developer",
+            "company": "Kashat",
+            "text": "Mateen is a highly skilled and dedicated professional. He consistently goes above and beyond to ensure that projects are completed on time and to the highest standard. His attention to detail and problem-solving skills are exceptional, making him an invaluable asset to any team. He also have a positive attitude and is a great team player."
+        },
+        {
+            "name": "Zubair Ahmad",
+            "position": "Software Engineer",
+            "company": "Plexable",
+            "text": "It was a pleasure working with Muhammad Mateen at Plexable. He is a result-oriented professional and very talented developer. I’ve seen him as a very hard-working and dedicated professional, specifically his dedication and willingness to help others in the team by providing great technical support."
+        },
+        {
+            "name": "Saeed Ahmad",
+            "position": "Project Manager",
+            "company": "AppInSnap",
+            "text": "Mateen is very helpful and result-oriented person. During working with him at AppinSnap, he always come up with unique and easy ideas to solve complex problems and meet difficult deadlines. He is one of the energetic persons."
+        }
+    ]
+}

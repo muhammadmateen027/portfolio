@@ -6,7 +6,7 @@ import { FaQuoteLeft, FaTimes } from 'react-icons/fa';
 import './recommendations.css';
 
 export function RecommendationsCarousel() {
-    const { recommendations } = usePortfolioData();
+    const { recommendations, recommendationsTitle } = usePortfolioData();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedRec, setSelectedRec] = useState<RecommendationItem | null>(null);
     const [exitDirection, setExitDirection] = useState<'left' | 'right' | null>(null);
@@ -39,144 +39,80 @@ export function RecommendationsCarousel() {
     const visibleItems = getVisibleItems();
 
     return (
-        <div className="recommendations-stack-container">
-            {visibleItems.map(({ item, index }) => {
-                const isTop = index === 0;
-                let className = "recommendation-card glass-card";
-                if (isTop && exitDirection) {
-                    className += ` exit-${exitDirection}`;
-                }
+        <div className="recommendations-stack-container" style={{ textAlign: 'left', padding: '0 16px' }}>
+            <h2 style={{
+                marginBottom: '16px',
+                fontSize: '2rem',
+                fontWeight: 700,
+                letterSpacing: '-0.02em'
+            }}>
+                {recommendationsTitle}
+            </h2>
+            <div className="recommendations-cards-wrapper" style={{ position: 'relative', height: '180px' }}>
+                {visibleItems.map(({ item, index }) => {
+                    const isTop = index === 0;
+                    let className = "recommendation-card glass-card";
+                    if (isTop && exitDirection) {
+                        className += ` exit-${exitDirection}`;
+                    }
 
-                return (
-                    <div
-                        key={`${item.name}-${currentIndex + index}`}
-                        className={className}
-                        onClick={() => isTop && setSelectedRec(item)}
-                        style={{
-                            zIndex: 100 - index,
-                            transform: `translateX(-50%) translateZ(${-index * 40}px) translateY(${index * 12}px)`,
-                            opacity: 1 - index * 0.25,
-                            borderLeft: isTop ? '4px solid #fda085' : '1px solid rgba(255,255,255,0.1)',
-                            cursor: isTop ? 'pointer' : 'default',
-                        }}
-                    >
-                        <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                            <FaQuoteLeft style={{ color: '#fda085', opacity: 0.2, flexShrink: 0, marginTop: '4px' }} size={20} />
-                            <div style={{ flex: 1 }}>
-                                <p style={{
-                                    fontStyle: 'italic',
-                                    fontSize: '0.95rem',
-                                    margin: 0,
-                                    display: '-webkit-box',
-                                    WebkitLineClamp: 2,
-                                    WebkitBoxOrient: 'vertical',
-                                    overflow: 'hidden',
-                                    lineHeight: '1.5',
-                                    fontWeight: 400,
-                                    opacity: 0.85
-                                }}>
-                                    {item.text}
-                                </p>
-                                <div style={{ marginTop: '12px' }}>
-                                    <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#fda085' }}>
-                                        {item.name}
-                                    </div>
-                                    {(item.position || item.company) && (
-                                        <div style={{
-                                            fontSize: '0.75rem',
-                                            opacity: 0.6,
-                                            marginTop: '2px',
-                                            fontWeight: 500
-                                        }}>
-                                            {item.position}{item.position && item.company ? ' · ' : ''}{item.company}
+                    return (
+                        <div
+                            key={`${item.name}-${currentIndex + index}`}
+                            className={className}
+                            onClick={() => isTop && setSelectedRec(item)}
+                            style={{
+                                zIndex: 100 - index,
+                                transform: `translateX(-50%) translateZ(${-index * 40}px) translateY(${index * 12}px)`,
+                                opacity: 1 - index * 0.25,
+                                borderLeft: isTop ? '4px solid var(--accent-color)' : '1px solid var(--glass-border)',
+                                cursor: isTop ? 'pointer' : 'default',
+                            }}
+                        >
+                            <div className="recommendation-card-content">
+                                <FaQuoteLeft className="quote-icon" size={20} />
+                                <div className="recommendation-text-wrapper">
+                                    <p className="recommendation-text-preview">
+                                        {item.text}
+                                    </p>
+                                    <div className="recommendation-author">
+                                        <div className="recommendation-name">
+                                            {item.name}
                                         </div>
-                                    )}
+                                        {(item.position || item.company) && (
+                                            <div className="recommendation-info">
+                                                {item.position}{item.position && item.company ? ' · ' : ''}{item.company}
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
 
             {selectedRec && createPortal(
-                <div
-                    style={{
-                        position: 'fixed',
-                        top: 0,
-                        left: 0,
-                        width: '100vw',
-                        height: '100vh',
-                        backgroundColor: 'rgba(0,0,0,0.85)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        zIndex: 10000,
-                        backdropFilter: 'blur(16px)',
-                        padding: '20px',
-                        boxSizing: 'border-box'
-                    }}
-                    onClick={() => setSelectedRec(null)}
-                >
+                <div className="modal-overlay" onClick={() => setSelectedRec(null)}>
                     <div
-                        className="glass-card modal-container"
-                        style={{
-                            maxWidth: '620px',
-                            width: '100%',
-                            position: 'relative',
-                            padding: '48px 40px',
-                            maxHeight: '90vh',
-                            overflowY: 'auto',
-                            margin: 'auto',
-                            animation: 'modalFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                            boxShadow: '0 30px 60px rgba(0, 0, 0, 0.5)',
-                            border: '1px solid rgba(255, 255, 255, 0.1)'
-                        }}
+                        className="modal-container"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             onClick={() => setSelectedRec(null)}
                             aria-label="Close"
                             className="modal-close-button"
-                            style={{
-                                position: 'absolute',
-                                top: '16px',
-                                right: '16px',
-                                background: 'rgba(255,255,255,0.1)',
-                                border: 'none',
-                                borderRadius: '50%',
-                                color: 'white',
-                                width: '36px',
-                                height: '36px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                cursor: 'pointer'
-                            }}
                         >
-                            <FaTimes size={18} />
+                            <FaTimes size={24} />
                         </button>
-                        <FaQuoteLeft style={{ color: '#fda085', marginBottom: '24px', opacity: 0.8 }} size={48} />
-                        <p style={{
-                            fontStyle: 'italic',
-                            fontSize: '1.1rem',
-                            lineHeight: '1.7',
-                            marginBottom: '32px',
-                            fontWeight: 500
-                        }}>
+                        <FaQuoteLeft className="modal-quote-icon" size={48} />
+                        <p className="modal-text">
                             {selectedRec.text}
                         </p>
-                        <div style={{ borderTop: '2px solid rgba(128, 128, 128, 0.1)', paddingTop: '24px' }}>
-                            <h4 style={{ color: '#fda085', margin: 0, fontSize: '1.2rem', fontWeight: 700 }}>{selectedRec.name}</h4>
+                        <div className="modal-footer">
+                            <h4 className="modal-author-name">{selectedRec.name}</h4>
                             {(selectedRec.position || selectedRec.company) && (
-                                <p style={{
-                                    margin: '4px 0 0 0',
-                                    opacity: 0.7,
-                                    fontSize: '0.9rem',
-                                    fontWeight: 500,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '4px'
-                                }}>
+                                <p className="modal-author-info">
                                     {selectedRec.position}{selectedRec.position && selectedRec.company ? ' · ' : ''}{selectedRec.company}
                                 </p>
                             )}

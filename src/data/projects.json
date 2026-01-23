@@ -7,21 +7,61 @@
         ]
     },
     {
-        "title": "Peachee",
-        "description": "A comprehensive lifestyle and community platform built with Flutter. It focuses on connecting users with local services and foster a vibrant community atmosphere with real-time updates and seamless interactions.",
+        "title": "Jaxon - eSports News & Videos",
+        "description": "Jaxon esports Gaming News & Videos: Gamer news highlights, esports events schedule and scores, esports and gaming skill improvement videos",
         "links": [
-            "https://peachee.com"
+            "https://apps.apple.com/de/app/jaxon-esports-news-videos/id1596732966?l=en-GB",
+            "https://play.google.com/store/apps/details?id=de.axelspringer.jaxon"
         ]
     },
     {
         "title": "Teleportal Logistics",
         "description": "A robust logistics platform designed for real-time tracking of shipments and fleet management. It integrates complex GPS tracking modules and provides a seamless interface for both drivers and dispatchers.",
-        "links": []
+        "links": [
+            "https://teleportal.asia/"
+        ]
+    },
+    {
+        "title": "CrimeDoor",
+        "description": "CrimeDoor is the best True Crime app with 500+ cases and AR crime scenes. A library of trustworthy True Crime resources for our community of advocates and experts alike. CrimeDoor is a trusted news resource for those seeking the freshest perspective on cases worldwide. We strive to bring awareness back into focus with our coverage, which features True Crime stories that are underpinned by reliable information from up-to-date sources, as told by compassionate storytellers. We're working to give you the tools, stories and technology that will help shine a spotlight on victims and their stories. Our library is built with an all-inclusive goal: providing trustworthy resources for our community of advocates and experts alike. Our interactive experience takes you through the victims' stories, providing clarity to deepen your knowledge about what happened and why. You also receive detailed insights into each investigation with our cutting edge tools, while our 3D re-creation of each profile elevates your access and knowledge of each story.",
+        "links": [
+            "https://apps.apple.com/us/app/crimedoor/id1529358461"
+        ]
+    },
+    {
+        "title": "Peachee",
+        "description": "Peachee is meant to connect people to other people’s experiences. It helps people that aren’t finding the inspiration they want in the social media content. And, at the same time, it helps content creators better exercise creativity by allowing them to put focus on content rather than on moments.",
+        "links": [
+            "https://apps.apple.com/us/app/peachee-ny-recs-stories/id1612312877",
+            "https://peachee.com"
+        ]
+    },
+    {
+        "title": "Red Nova Energy",
+        "description": "This App was designed for Service Contractors, to improve the control of employees over jobs or project. You can now know when and where an employee gets to the job site and for how long he was there. Every time you click on Clock in, the time and location gets capture. Once you finish the job you will clock out getting the time, location and duration at the job site. You can repeat this process during the day until you are ready to send the log to the office or entity to check the hours. To send the log you just need to press \"End Day\" and the log will be sent by email to the email you entered in Time keeper field. Simple app that can help you control the spending on your jobs/project.",
+        "links": [
+            "https://apps.apple.com/us/app/peachee-ny-recs-stories/id1612312877",
+            "https://peachee.com"
+        ]
     },
     {
         "title": "e-Pelabuhan",
-        "description": "A sophisticated Port Management System designed to optimize cargo handling and vessel scheduling. It streamlines port operations by automating manual tasks and providing real-time analytics for better decision-making.",
+        "description": "E Pelabuhan Application is a comprehensive, efficient and customer-friendly system developed by Labuan Port Authority for the use of Port users. It was developed to reduce manual work processes, providing more specific, complete and accurate information to port users. It is also to maximize work efficiency and deliver high quality services to stakeholders and port users.",
         "links": []
+    },
+    {
+        "title": "eRequest for Legal Assistance",
+        "description": "This application is open to Sunway Group Users for legal assistance on a document. User needs to do is to fill-up the self-guided e-Request form. Group Legal will, upon its receipt of the e-Request form duly completed, revert with advice or proposed amendments at their soonest but with an average turnaround time of 10 calendar days from the date of acceptance of the request. In completing the e-Request form, Group Legal team may need to add the estimated number of days for the approving party to grant their approval to the 10 calendar days in order to avoid having to provide reasons for the shorter notice period. ",
+        "links": [
+            "https://cloudapps.sunway.com.my/jw/web/userview/rla/eRequest_Assistance/_/rla_dashboard"
+        ]
+    },
+    {
+        "title": "eInconvenience Allowance",
+        "description": "The objectives for the development of e-Inconvenience Allowance feature is to automate and allow the Sunway Group staff to submit in the system then route for approval before it routes to ITRM HR for processing. Easily track on the inconvenience allowance request and able to generate per month directly from the system.",
+        "links": [
+            "https://cloudapps.sunway.com.my/jw/web/userview/ia/inconvenienceAllowance/_/ia_dashboard?"
+        ]
     },
     {
         "title": "Expensense Pro",
@@ -34,8 +74,8 @@
         "links": []
     },
     {
-        "title": "Pass Dating App",
-        "description": "A modern social search and dating application that uses geofencing and preference matching to connect people. It features real-time chat, video calling, and a highly customizable user profile system.",
+        "title": "Pass",
+        "description": "Pass is a location-based social search mobile app that facilitates communication between mutually interested users, allowing matched users to chat. The app is most commonly used as a datingapp, but has branched out to provide more services, making it more of a general social media application.",
         "links": []
     },
     {

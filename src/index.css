@@ -5,9 +5,14 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  /* Global Tokens */
+  --primary-accent: #fda085;
+  --secondary-accent: #f6d365;
+  --accent-gradient: linear-gradient(135deg, var(--secondary-accent) 0%, var(--primary-accent) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,13 +21,37 @@
 }
 
 [data-theme='light'] {
-  color: #213547;
-  background-color: #ffffff;
+  --bg-color: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #666666;
+  --accent-color: var(--primary-accent);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --modal-overlay: rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --chip-bg: rgba(253, 160, 133, 0.1);
+  --card-bg-elevated: #ffffff;
 }
 
 [data-theme='dark'] {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --bg-color: #0f1115;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d1d1;
+  --text-muted: #999999;
+  --accent-color: var(--secondary-accent);
+  --glass-bg: rgba(20, 22, 27, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --modal-overlay: rgba(0, 0, 0, 0.92);
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --chip-bg: rgba(246, 211, 101, 0.1);
+  --card-bg-elevated: #1a1c23;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {

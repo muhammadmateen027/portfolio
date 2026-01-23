@@ -24,11 +24,11 @@
     top: 8px;
     width: 16px;
     height: 16px;
-    background: linear-gradient(135deg, #f6d365, #fda085);
+    background: var(--accent-gradient);
     border-radius: 50%;
-    border: 3px solid var(--timeline-dot-border, #fff);
+    border: 3px solid var(--bg-color);
     z-index: 2;
-    box-shadow: 0 2px 8px #fda08544;
+    box-shadow: 0 2px 8px rgba(253, 160, 133, 0.3);
 }
 
 .timeline-dot-animated {
@@ -41,11 +41,11 @@
 
 @keyframes pulse {
     from {
-        box-shadow: 0 0 0 0 #fda08555;
+        box-shadow: 0 0 0 0 rgba(253, 160, 133, 0.4);
     }
 
     to {
-        box-shadow: 0 0 16px 8px #fda08533;
+        box-shadow: 0 0 16px 8px rgba(253, 160, 133, 0.2);
     }
 }
 
@@ -55,34 +55,27 @@
     top: 28px;
     width: 4px;
     height: calc(100% - 28px);
-    background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+    background: var(--accent-gradient);
     border-radius: 2px;
     z-index: 1;
 }
 
 .timeline-content {
-    background: var(--timeline-bg, rgba(255, 255, 255, 0.7));
+    background: var(--glass-bg);
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--card-shadow);
     padding: 20px 24px;
     margin-left: 24px;
     width: 100%;
     transition: background 0.3s;
-}
-
-[data-theme='dark'] .timeline-content {
-    background: rgba(34, 34, 34, 0.7);
+    border: 1px solid var(--glass-border);
 }
 
 .timeline-header {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #333;
+    color: var(--accent-color);
     margin-bottom: 4px;
-}
-
-[data-theme='dark'] .timeline-header {
-    color: #f6d365;
 }
 
 .timeline-role {
@@ -90,17 +83,19 @@
 }
 
 .timeline-company {
-    color: #888;
+    color: var(--text-muted);
     font-weight: 400;
 }
 
 .timeline-duration {
-    color: #f6d365;
+    color: var(--accent-color);
     font-weight: 500;
     margin-bottom: 8px;
+    font-size: 0.9rem;
 }
 
 .timeline-description {
+    color: var(--text-secondary);
     margin-bottom: 8px;
 }
 
@@ -108,6 +103,7 @@
     padding-left: 1.2rem;
     margin: 8px 0 0 0;
     text-align: left;
+    color: var(--text-secondary);
 }
 
 .timeline-highlights li {

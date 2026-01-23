@@ -54,6 +54,7 @@ export interface PortfolioData {
     projects: ProjectItem[];
     skills: SkillCategory[];
     recommendations: RecommendationItem[];
+    recommendationsTitle: string;
     publications: string[];
     languages: string[];
     links: {
@@ -74,7 +75,8 @@ const defaultData: PortfolioData = {
     skills: skillsData,
     education: educationData,
     licenses: licensesData,
-    recommendations: recommendationsData,
+    recommendations: recommendationsData.items,
+    recommendationsTitle: recommendationsData.title,
     publications: publicationsData,
     languages: languagesData,
 };

@@ -42,7 +42,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
     return (
         <ThemeContext.Provider value={value}>
-            <div data-theme={theme} className="theme-wrapper">
+            <div className="theme-wrapper">
                 {children}
             </div>
         </ThemeContext.Provider>
