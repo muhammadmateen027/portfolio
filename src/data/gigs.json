@@ -1,0 +1,72 @@
+[
+    {
+        "id": "login-reg-view",
+        "title": "Premium Login & Registration View",
+        "description": "A professionally designed, highly responsive login system with social integration and form validation.",
+        "price": "49",
+        "features": [
+            "Modern UI/UX with smooth animations",
+            "Social Login (Google/Apple/Facebook)",
+            "Real-time validation & Error handling",
+            "Dark & Light mode support",
+            "Clean and documented code"
+        ],
+        "category": "UI/UX"
+    },
+    {
+        "id": "firebase-simple",
+        "title": "Simple Firebase Integration",
+        "description": "Essential backend setup for your Flutter app including database, authentication, and file storage.",
+        "price": "149",
+        "features": [
+            "Authentication (Email/Password & Google)",
+            "Cloud Firestore database setup",
+            "Firebase Storage for images/files",
+            "Security rules configuration",
+            "Basic Analytics integration"
+        ],
+        "category": "Backend"
+    },
+    {
+        "id": "firebase-complex",
+        "title": "Full-Stack Firebase Powers",
+        "description": "Advanced serverless features to make your app robust, automated, and engaging.",
+        "price": "349",
+        "features": [
+            "Push Notifications (FCM)",
+            "Cloud Functions (Serverless logic)",
+            "Remote Config & A/B Testing",
+            "Dynamic Links & Deep Linking",
+            "Advanced Crashlytics & Performance monitoring"
+        ],
+        "category": "Scalability"
+    },
+    {
+        "id": "architecture-revamp",
+        "title": "Clean Architecture & State Management",
+        "description": "Refactor your existing app into a scalable, testable, and maintainable codebase using modern industry standards.",
+        "price": "399",
+        "features": [
+            "Migration to BLoC or Riverpod",
+            "Domain-Driven Design (DDD) approach",
+            "Modular architecture setup",
+            "Dependency Injection implementation",
+            "Unit & Widget testing foundation"
+        ],
+        "category": "Architecture"
+    },
+    {
+        "id": "store-deployment",
+        "title": "App Store & Play Store Launch",
+        "description": "A stress-free submission process. I handle the technical hurdles of getting your app live.",
+        "price": "99",
+        "features": [
+            "Metadata & Description optimization",
+            "Store Screenshot generation",
+            "Privacy Policy guidance",
+            "Release management & Internal testing",
+            "Post-submission support"
+        ],
+        "category": "DevOps"
+    }
+]

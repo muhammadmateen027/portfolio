@@ -8,6 +8,7 @@ import { RecommendationsCarousel } from '../Recommendations/Recommendations';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { EducationSection } from '../EducationSection/EducationSection';
 import { SkillsSection } from '../SkillsSection/SkillsSection';
+import { GigsSection } from '../../gigs/GigsSection';
 
 function GlassCard({ children }: { children: React.ReactNode }) {
     return <div className="glass-card" style={{ padding: '20px', marginBottom: '16px' }}>{children}</div>;
@@ -29,6 +30,7 @@ export function MainPage() {
 
     const sections: Record<string, React.ReactElement<{ title: string }>> = {
         experience: <Section title="Experience"><ExperienceSection /></Section>,
+        gigs: <Section title="Gigs"><GigsSection /></Section>,
         projects: (
             <Section title="Projects">
                 <div style={{

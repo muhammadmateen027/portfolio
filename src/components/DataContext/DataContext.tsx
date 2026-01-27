@@ -10,6 +10,16 @@ import licensesData from '../../data/licenses.json';
 import recommendationsData from '../../data/recommendations.json';
 import publicationsData from '../../data/publications.json';
 import languagesData from '../../data/languages.json';
+import gigsData from '../../data/gigs.json';
+
+export interface GigItem {
+    id: string;
+    title: string;
+    description: string;
+    price: string;
+    features: string[];
+    category: string;
+}
 
 export interface ExperienceItem {
     role: string;
@@ -57,6 +67,7 @@ export interface PortfolioData {
     recommendationsTitle: string;
     publications: string[];
     languages: string[];
+    gigs: GigItem[];
     links: {
         linkedin: string;
         github: string;
@@ -79,6 +90,7 @@ const defaultData: PortfolioData = {
     recommendationsTitle: recommendationsData.title,
     publications: publicationsData,
     languages: languagesData,
+    gigs: gigsData,
 };
 
 export const DataContext = createContext<PortfolioData>(defaultData);
