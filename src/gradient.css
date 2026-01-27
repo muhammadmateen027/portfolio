@@ -33,7 +33,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     font-weight: 600;
     font-size: 0.95rem;
-    border: 2px solid var(--glass-border);
+    border: 1px solid var(--glass-border);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    background-clip: padding-box;
+    overflow: hidden;
 }
 
 .chip-gradient:hover {
@@ -43,12 +50,19 @@ body {
     color: var(--accent-color);
 }
 
+.chip-gradient:focus,
+.chip-gradient:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
 .chip-gradient.active {
     background: var(--accent-gradient);
     color: var(--bg-color);
     box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
     transform: scale(1.05);
-    border-color: transparent;
+    border: none;
+    background-clip: border-box;
 }
 
 [data-theme='dark'] .chip-gradient.active {
@@ -174,6 +188,8 @@ h2 {
     margin-bottom: 24px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--card-shadow);
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 .modal-overlay {
